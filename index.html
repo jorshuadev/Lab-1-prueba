@@ -21,7 +21,7 @@
             margin-bottom: 2rem;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 1rem;
         }
@@ -34,6 +34,10 @@
             border-bottom: 2px solid #eaeaea;
             padding-bottom: 0.5rem;
             margin-top: 2rem;
+        }
+        h3 {
+            color: #555;
+            margin-top: 1.5rem;
         }
         .code-icon {
             font-family: monospace;
@@ -56,12 +60,216 @@
             background-color: #f1f3f4;
             color: #666;
         }
+
+        /* Estilos para la sección de habilidades */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .skill-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.2rem;
+            width: calc(33.333% - 20px);
+            min-width: 200px;
+            flex-grow: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .skill-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .skill-level-container {
+            background-color: #f1f3f4;
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .skill-level {
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #4285f4, #34a853);
+        }
+        .skill-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
+        .skill-years {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Estilos para certificaciones */
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .certification-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 1rem;
+            width: calc(50% - 15px);
+            min-width: 250px;
+            flex-grow: 1;
+            border-left: 4px solid #4285f4;
+        }
+        .certification-title {
+            font-weight: bold;
+            color: #4285f4;
+            margin-bottom: 5px;
+        }
+        .certification-issuer {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .certification-date {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Estilos para proyectos destacados */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+        .project-image {
+            width: 100%;
+            height: 150px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+        }
+        .project-content {
+            padding: 1rem;
+        }
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .project-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .tech-tag {
+            background-color: #f1f3f4;
+            color: #4285f4;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Estilos para testimonios */
+        .testimonials-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .testimonial-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.2rem;
+            position: relative;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .testimonial-text::before {
+            content: '"';
+            font-size: 2rem;
+            color: #4285f4;
+            position: absolute;
+            left: 0;
+            top: -10px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #adb5bd;
+        }
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name {
+            font-weight: bold;
+            color: #333;
+        }
+        .author-position {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .skill-box {
+                width: calc(50% - 20px);
+            }
+            .certification-box {
+                width: 100%;
+            }
+            .projects-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 2rem;
             }
             .feature-box {
                 padding: 1rem;
+            }
+            .skill-box {
+                width: 100%;
             }
         }
     </style>
@@ -83,6 +291,195 @@
             <p>
                 A través de estas páginas, compartiré conocimientos técnicos, buenas prácticas, desafíos superados y lecciones aprendidas en el fascinante mundo de la programación y el desarrollo de aplicaciones.
             </p>
+        </div>
+
+        <!-- Sección de Habilidades Técnicas -->
+        <div class="feature-box">
+            <h2>Mis Habilidades Técnicas</h2>
+            <p>A lo largo de mi carrera he trabajado con diversas tecnologías y herramientas. Estas son algunas en las que me especializo:</p>
+            
+            <div class="skills-container">
+                <!-- JavaScript -->
+                <div class="skill-box">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                    <div class="skill-description">Experto (95%)</div>
+                    <p class="skill-description">Desarrollo frontend y backend con JavaScript moderno, ES6+, frameworks y librerías.</p>
+                    <p class="skill-years">8 años de experiencia</p>
+                </div>
+                
+                <!-- React -->
+                <div class="skill-box">
+                    <div class="skill-name">React</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                    <div class="skill-description">Avanzado (90%)</div>
+                    <p class="skill-description">Desarrollo de aplicaciones SPA complejas, hooks, context API, Redux.</p>
+                    <p class="skill-years">5 años de experiencia</p>
+                </div>
+                
+                <!-- Node.js -->
+                <div class="skill-box">
+                    <div class="skill-name">Node.js</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                    <div class="skill-description">Avanzado (85%)</div>
+                    <p class="skill-description">APIs RESTful, Express, autenticación, integración con bases de datos.</p>
+                    <p class="skill-years">6 años de experiencia</p>
+                </div>
+                
+                <!-- Python -->
+                <div class="skill-box">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                    <div class="skill-description">Avanzado (80%)</div>
+                    <p class="skill-description">Desarrollo backend, análisis de datos, automatización y scripts.</p>
+                    <p class="skill-years">4 años de experiencia</p>
+                </div>
+                
+                <!-- SQL -->
+                <div class="skill-box">
+                    <div class="skill-name">SQL</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                    <div class="skill-description">Avanzado (85%)</div>
+                    <p class="skill-description">Diseño de bases de datos, optimización de consultas, PostgreSQL, MySQL.</p>
+                    <p class="skill-years">7 años de experiencia</p>
+                </div>
+                
+                <!-- Docker -->
+                <div class="skill-box">
+                    <div class="skill-name">Docker</div>
+                    <div class="skill-level-container">
+                        <div class="skill-level" style="width: 75%;"></div>
+                    </div>
+                    <div class="skill-description">Intermedio-Avanzado (75%)</div>
+                    <p class="skill-description">Containerización, Docker Compose, orquestación básica.</p>
+                    <p class="skill-years">3 años de experiencia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Certificaciones -->
+        <div class="feature-box">
+            <h2>Certificaciones</h2>
+            <p>He obtenido diversas certificaciones que avalan mis conocimientos y habilidades:</p>
+            
+            <div class="certifications-container">
+                <div class="certification-box">
+                    <div class="certification-title">AWS Certified Solutions Architect</div>
+                    <div class="certification-issuer">Amazon Web Services</div>
+                    <div class="certification-date">Expedido: Junio 2023 • Válido hasta: Junio 2026</div>
+                </div>
+                
+                <div class="certification-box">
+                    <div class="certification-title">Professional Scrum Master I (PSM I)</div>
+                    <div class="certification-issuer">Scrum.org</div>
+                    <div class="certification-date">Expedido: Marzo 2022</div>
+                </div>
+                
+                <div class="certification-box">
+                    <div class="certification-title">MongoDB Certified Developer</div>
+                    <div class="certification-issuer">MongoDB University</div>
+                    <div class="certification-date">Expedido: Noviembre 2021</div>
+                </div>
+                
+                <div class="certification-box">
+                    <div class="certification-title">Google Professional Cloud Developer</div>
+                    <div class="certification-issuer">Google Cloud</div>
+                    <div class="certification-date">Expedido: Agosto 2022 • Válido hasta: Agosto 2024</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Proyectos Destacados -->
+        <div class="feature-box">
+            <h2>Proyectos Destacados</h2>
+            <p>Estos son algunos de los proyectos más relevantes en los que he trabajado:</p>
+            
+            <div class="projects-container">
+                <div class="project-box">
+                    <div class="project-image">Imagen del Proyecto</div>
+                    <div class="project-content">
+                        <div class="project-title">Sistema de Gestión Empresarial</div>
+                        <div class="project-description">Plataforma completa para la gestión de recursos, clientes y proyectos de una empresa de consultoría.</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-box">
+                    <div class="project-image">Imagen del Proyecto</div>
+                    <div class="project-content">
+                        <div class="project-title">Plataforma E-learning</div>
+                        <div class="project-description">Sistema de aprendizaje en línea con cursos interactivos, evaluaciones y seguimiento de progreso.</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-box">
+                    <div class="project-image">Imagen del Proyecto</div>
+                    <div class="project-content">
+                        <div class="project-title">API de Análisis de Datos</div>
+                        <div class="project-description">Servicio RESTful para procesamiento y análisis de grandes volúmenes de datos en tiempo real.</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Testimonios -->
+        <div class="feature-box">
+            <h2>Testimonios Profesionales</h2>
+            <p>Algunos comentarios de colegas y clientes con los que he trabajado:</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-box">
+                    <div class="testimonial-text">
+                        Su capacidad para resolver problemas complejos y su profundo conocimiento técnico fueron fundamentales para el éxito de nuestro proyecto. Siempre entrega soluciones elegantes y bien documentadas.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <div class="author-name">Ana Martínez</div>
+                            <div class="author-position">CTO, TechSolutions Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-box">
+                    <div class="testimonial-text">
+                        Trabajar con un profesional tan dedicado y meticuloso ha sido una experiencia excepcional. Su enfoque en la calidad del código y las mejores prácticas elevó significativamente los estándares de nuestro equipo.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JR</div>
+                        <div class="author-info">
+                            <div class="author-name">Javier Rodríguez</div>
+                            <div class="author-position">Lead Developer, InnovaSoft</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="feature-box">
